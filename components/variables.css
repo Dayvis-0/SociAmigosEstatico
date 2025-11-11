@@ -1,0 +1,15 @@
+/* --- VARIABLES --- */
+:root {
+    --background-color: #f0f2f5;
+    --surface-color: #ffffff;
+    --text-color: #050505;
+    --secondary-text-color: #65676b;
+    --primary-action-color: #1877f2;
+    --hover-bg: #e4e6eb;
+    --light-bg: #f0f2f5;
+    --border-color: #e4e6eb;
+    --notification-color: #fa3e3e;
+    --online-color: #31a24c;
+    --shadow: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.1);
+}

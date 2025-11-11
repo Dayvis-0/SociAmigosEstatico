@@ -1,0 +1,254 @@
+/* --- NAVBAR --- */
+.navbar {
+    background: var(--surface-color);
+    box-shadow: var(--shadow);
+    padding: 5px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 16px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex: 1;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.app-logo {
+    font-size: 32px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.app-logo:hover {
+    transform: scale(1.1);
+}
+
+/* --- SEARCH BAR --- */
+.search-container {
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 24px;
+    border: none;
+    background: var(--light-bg);
+    transition: background 0.2s, width 0.25s ease, opacity 0.2s ease, padding 0.2s ease;
+    gap: 8px;
+}
+
+.search-icon-inline {
+    display: inline-grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    outline: none;
+    color: var(--text-color);
+}
+
+.search-input::placeholder {
+    color: var(--secondary-text-color);
+}
+
+.search-input:focus {
+    background: transparent;
+}
+
+.search-input-wrapper:focus-within {
+    background: var(--hover-bg);
+}
+
+.search-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--light-bg);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.search-toggle:hover {
+    background: var(--hover-bg);
+}
+
+/* --- NAVBAR CENTER --- */
+.navbar-center {
+    display: none;
+    gap: 8px;
+}
+
+.nav-center-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: var(--secondary-text-color);
+}
+
+.nav-center-item:hover {
+    background: var(--light-bg);
+}
+
+.nav-center-item span:first-child {
+    font-size: 24px;
+}
+
+.nav-center-text {
+    font-size: 11px;
+    font-weight: 500;
+}
+/* --- NAVBAR CENTER HOME --- */
+.navbar-center-home {
+    display: none;
+    gap: 8px;
+}
+
+.nav-center-home-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: var(--secondary-text-color);
+}
+
+.nav-center-home-item:hover {
+    background: var(--light-bg);
+}
+
+.nav-center-home-item span:first-child {
+    font-size: 24px;
+}
+
+.nav-center-home-text {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* --- NAVBAR RIGHT --- */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.notification-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.notification-btn:hover {
+    background: var(--hover-bg);
+}
+
+.notification-icon {
+    font-size: 20px;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: var(--notification-color);
+    color: var(--surface-color);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
+}
+
+.user-avatar-nav {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--surface-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.user-avatar-nav:hover {
+    transform: scale(1.05);
+}
+
+/* --- NAV CENTER: elemento seleccionado --- */
+.nav-center-item.active {
+    position: relative; /* necesario para que el ::after se posicione respecto al elemento */
+    color: var(--primary-action-color);
+}
+
+/* Indicador de barra azul debajo del elemento activo */
+.nav-center-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--primary-action-color);
+    border-radius: 2px 2px 0 0;
+}
+
+/* Aumentar la visibilidad del ícono/emoji en el elemento activo */
+.nav-center-item.active span:first-child {
+    color: var(--primary-action-color);
+}
+
+.nav-center-home-item,
+.sidebar-item {
+    text-decoration: none;
+    color: inherit;
+}   

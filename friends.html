@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigos - Red Social Básica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo-link">
+                <div class="app-logo">🌐</div>
+            </a>
+            <div class="search-container" id="searchWrap">
+                <div class="search-input-wrapper" id="searchInputWrap">
+                    <span class="search-icon-inline">🔍</span>
+                    <input type="text" class="search-input" id="searchField" placeholder="Buscar en Red Social Básica">
+                </div>
+                <button class="search-toggle" id="searchToggle" aria-label="Abrir búsqueda">🔍</button>
+            </div>
+        </div>        
+        <div class="navbar-center">
+            <div class="nav-center-item">
+                <span>🏠</span>
+                <span class="nav-center-text">Inicio</span>
+            </div>
+            <div class="nav-center-item">
+                <span>👥</span>
+                <span class="nav-center-text">Amigos</span>
+            </div>
+            <div class="nav-center-item">
+                <span>🎥</span>
+                <span class="nav-center-text">Videos</span>
+            </div>
+        </div>
+        
+        <div class="navbar-right">
+            <div class="notification-btn">
+                <span class="notification-icon">🔔</span>
+                <span class="notification-badge">3</span>
+            </div>
+            <div class="user-avatar-nav">MG</div>
+        </div>
+    </nav>
+
+    <div class="friends-container">
+        <div class="friends-header">
+            <h1>Amigos</h1>
+            <div class="friends-tabs">
+                <div class="friends-tab active">Todos los amigos</div>
+                <div class="friends-tab">Sugerencias</div>
+                <div class="friends-tab">Solicitudes</div>
+            </div>
+        </div>
+
+        <div class="friends-content">
+            <main class="friends-main">
+                <div class="friends-main-header">
+                    <div>
+                        <div class="friends-main-title">248 amigos</div>
+                        <div class="friends-count">Ordenados por: Nombre</div>
+                    </div>
+                    <input type="text" class="friends-search" placeholder="Buscar amigos">
+                </div>
+
+                <div class="friends-grid">
+                    <div class="friend-card">
+                        <div class="friend-card-avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">AP</div>
+                        <div class="friend-card-info">
+                            <div class="friend-card-name">Ana Pérez</div>
+                            <div class="friend-card-mutual">15 amigos en común</div>
+                            <div class="friend-card-actions">
+                                <button class="friend-card-btn primary">Amigos</button>
+                                <button class="friend-card-btn secondary">Mensaje</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friend-card">
+                        <div class="friend-card-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">DL</div>
+                        <div class="friend-card-info">
+                            <div class="friend-card-name">David López</div>
+                            <div class="friend-card-mutual">22 amigos en común</div>
+                            <div class="friend-card-actions">
+                                <button class="friend-card-btn primary">Amigos</button>
+                                <button class="friend-card-btn secondary">Mensaje</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friend-card">
+                        <div class="friend-card-avatar" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">SF</div>
+                        <div class="friend-card-info">
+                            <div class="friend-card-name">Sofía Fernández</div>
+                            <div class="friend-card-mutual">8 amigos en común</div>
+                            <div class="friend-card-actions">
+                                <button class="friend-card-btn primary">Amigos</button>
+                                <button class="friend-card-btn secondary">Mensaje</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friend-card">
+                        <div class="friend-card-avatar" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">RM</div>
+                        <div class="friend-card-info">
+                            <div class="friend-card-name">Roberto Morales</div>
+                            <div class="friend-card-mutual">12 amigos en común</div>
+                            <div class="friend-card-actions">
+                                <button class="friend-card-btn primary">Amigos</button>
+                                <button class="friend-card-btn secondary">Mensaje</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friend-card">
+                        <div class="friend-card-avatar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">PT</div>
+                        <div class="friend-card-info">
+                            <div class="friend-card-name">Patricia Torres</div>
+                            <div class="friend-card-mutual">18 amigos en común</div>
+                            <div class="friend-card-actions">
+                                <button class="friend-card-btn primary">Amigos</button>
+                                <button class="friend-card-btn secondary">Mensaje</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friend-card">
+                        <div class="friend-card-avatar" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">MV</div>
+                        <div class="friend-card-info">
+                            <div class="friend-card-name">Miguel Vargas</div>
+                            <div class="friend-card-mutual">9 amigos en común</div>
+                            <div class="friend-card-actions">
+                                <button class="friend-card-btn primary">Amigos</button>
+                                <button class="friend-card-btn secondary">Mensaje</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friend-card">
+                        <div class="friend-card-avatar" style="background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);">CL</div>
+                        <div class="friend-card-info">
+                            <div class="friend-card-name">Carmen López</div>
+                            <div class="friend-card-mutual">14 amigos en común</div>
+                            <div class="friend-card-actions">
+                                <button class="friend-card-btn primary">Amigos</button>
+                                <button class="friend-card-btn secondary">Mensaje</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friend-card">
+                        <div class="friend-card-avatar" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">AL</div>
+                        <div class="friend-card-info">
+                            <div class="friend-card-name">Alberto Luna</div>
+                            <div class="friend-card-mutual">20 amigos en común</div>
+                            <div class="friend-card-actions">
+                                <button class="friend-card-btn primary">Amigos</button>
+                                <button class="friend-card-btn secondary">Mensaje</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friend-card">
+                        <div class="friend-card-avatar" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">VH</div>
+                        <div class="friend-card-info">
+                            <div class="friend-card-name">Valeria Herrera</div>
+                            <div class="friend-card-mutual">11 amigos en común</div>
+                            <div class="friend-card-actions">
+                                <button class="friend-card-btn primary">Amigos</button>
+                                <button class="friend-card-btn secondary">Mensaje</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friend-card">
+                        <div class="friend-card-avatar" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">JR</div>
+                        <div class="friend-card-info">
+                            <div class="friend-card-name">Jorge Ramírez</div>
+                            <div class="friend-card-mutual">6 amigos en común</div>
+                            <div class="friend-card-actions">
+                                <button class="friend-card-btn primary">Amigos</button>
+                                <button class="friend-card-btn secondary">Mensaje</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friend-card">
+                        <div class="friend-card-avatar" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);">LC</div>
+                        <div class="friend-card-info">
+                            <div class="friend-card-name">Laura Castro</div>
+                            <div class="friend-card-mutual">17 amigos en común</div>
+                            <div class="friend-card-actions">
+                                <button class="friend-card-btn primary">Amigos</button>
+                                <button class="friend-card-btn secondary">Mensaje</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friend-card">
+                        <div class="friend-card-avatar" style="background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);">MS</div>
+                        <div class="friend-card-info">
+                            <div class="friend-card-name">Mario Sánchez</div>
+                            <div class="friend-card-mutual">13 amigos en común</div>
+                            <div class="friend-card-actions">
+                                <button class="friend-card-btn primary">Amigos</button>
+                                <button class="friend-card-btn secondary">Mensaje</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

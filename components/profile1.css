@@ -1,0 +1,604 @@
+/* --- PROFILE PAGE --- */
+.profile-container {
+    max-width: 900px; /* Reducido para centrar el contenido principal */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Asegura que main ocupe todo el ancho */
+    padding: 0 16px 20px 16px;
+}
+
+.profile-main {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 900px; /* Ya no es necesario, pero se mantiene por si acaso */
+}
+
+/* --- COVER PHOTO --- */
+.profile-cover {
+    width: 100%;
+    height: 350px;
+    background: var(--surface-color);
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.profile-cover-gradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+}
+
+/* --- PROFILE HEADER SECTION --- */
+.profile-header-section {
+    background: var(--surface-color);
+    box-shadow: var(--shadow-sm);
+    margin-top: -60px;
+    position: relative;
+    border-radius: 0 0 8px 8px;
+}
+
+.profile-header-content {
+    display: flex;
+    align-items: flex-end;
+    padding: 16px 32px 0 32px;
+    gap: 20px;
+}
+
+.profile-avatar-large {
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: 4px solid var(--surface-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--surface-color);
+    font-weight: 700;
+    font-size: 64px;
+    box-shadow: var(--shadow);
+    flex-shrink: 0;
+}
+
+.profile-header-info {
+    flex: 1;
+    padding-bottom: 16px;
+}
+
+.profile-name-large {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+.profile-friends-count {
+    font-size: 15px;
+    color: var(--secondary-text-color);
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.profile-friends-preview {
+    display: flex;
+    gap: 0;
+    margin-top: 8px;
+}
+
+.friend-preview-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--surface-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--surface-color);
+    font-weight: 600;
+    font-size: 12px;
+    margin-left: -8px;
+    cursor: pointer;
+    transition: transform 0.2s, z-index 0.2s;
+}
+
+.friend-preview-avatar:first-child {
+    margin-left: 0;
+}
+
+.friend-preview-avatar:hover {
+    transform: translateY(-2px);
+    z-index: 10;
+}
+
+.profile-header-divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 0 32px;
+}
+
+/* --- PROFILE TABS --- */
+.profile-tabs {
+    background: var(--surface-color);
+    padding: 0 32px;
+    display: flex;
+    gap: 8px;
+    border-radius: 0 0 8px 8px;
+}
+
+.profile-tab {
+    padding: 16px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s;
+    position: relative;
+    border-bottom: 3px solid transparent;
+}
+
+.profile-tab:hover {
+    background: var(--light-bg);
+    border-radius: 8px 8px 0 0;
+}
+
+.profile-tab.active {
+    color: var(--primary-action-color);
+    border-bottom-color: var(--primary-action-color);
+}
+
+.profile-tab span:first-child {
+    font-size: 20px;
+}
+
+/* --- PROFILE POSTS --- */
+.profile-posts {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+/* --- SUGGESTIONS CARD (Adaptado para estar debajo de los posts) --- */
+
+/* **NUEVOS ESTILOS PARA LA SECCIÓN DE SUGERENCIAS HORIZONTAL** */
+
+.suggestions-card {
+    background: var(--surface-color);
+    border-radius: 8px;
+    padding: 16px 0 16px 16px; /* Padding izquierdo para la tarjeta */
+    box-shadow: var(--shadow-sm);
+    margin-top: 16px;
+    overflow: hidden; /* Oculta la barra de desplazamiento de la tarjeta */
+}
+
+.suggestions-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-color);
+    padding: 0 16px 12px 0; /* Padding superior e inferior, y derecho para el título */
+}
+
+.suggestions-card .suggestion-item {
+    display: inline-flex; /* Permite que los ítems se coloquen uno al lado del otro */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 140px; /* Ancho fijo para cada tarjeta de sugerencia */
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color); /* Borde similar al de la imagen */
+    background: var(--light-bg); /* Fondo ligeramente diferente para destacar */
+    margin-right: 8px; /* Espacio entre las tarjetas */
+    flex-shrink: 0; /* Evita que las tarjetas se encojan */
+    transition: background 0.2s;
+}
+
+.suggestions-card .suggestion-item:hover {
+    background: var(--hover-bg);
+}
+
+.suggestion-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--surface-color);
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.suggestion-info {
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.suggestion-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.suggestion-mutual {
+    font-size: 12px;
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.sidebar-follow-btn {
+    background: var(--primary-action-color);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.sidebar-follow-btn:hover {
+    background: var(--primary-action-hover);
+}
+
+/* Contenedor interno para el scroll horizontal */
+.suggestions-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestions-card > .suggestions-title {
+    /* El título se mantiene normal */
+}
+
+/* Crea un contenedor que contendrá todos los items para el scroll */
+.suggestions-card::after {
+    content: ""; /* truco para un div sin contenido en el HTML */
+    display: block;
+    clear: both;
+}
+
+/* Utiliza un envoltorio flex para el scroll horizontal */
+.suggestions-card {
+    /* Ya definimos la tarjeta, ahora ajustamos el contenedor de los ítems */
+    padding-bottom: 16px; /* Ajusta el padding para que no se vea el scrollbar feo */
+}
+
+.suggestions-card > .suggestion-item:nth-last-child(1) {
+    margin-right: 16px; /* Da padding extra al último elemento para que se vea bien */
+}
+
+/* **CONTENEDOR DE SCROLL HORIZONTAL** */
+.suggestions-card {
+    padding: 16px 0;
+}
+
+.suggestions-card > .suggestions-title {
+    padding: 0 16px 12px;
+}
+
+.suggestions-card > .suggestion-item {
+    display: none; /* Oculta los items directos en la tarjeta base */
+}
+
+/* Creamos un nuevo contenedor para el scroll con la misma estructura pero simulando el div interno */
+.suggestions-card {
+    /* Mantén la tarjeta principal */
+    position: relative;
+}
+
+/* Clonamos el contenido para el scroll, en este caso, lo hacemos a través de un nuevo contenedor flex */
+.suggestions-card .suggestions-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+    padding: 0 16px; /* Padding para el scroll horizontal */
+    padding-bottom: 8px; /* Espacio para el scrollbar */
+}
+
+/* Ajuste de estilos para los elementos dentro del scroll */
+.suggestions-card > .suggestion-item {
+    /* Estilos del item horizontal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 140px; 
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color); 
+    background: var(--light-bg); 
+    flex-shrink: 0; 
+}
+
+
+/* Reemplazo de .suggestions-card con una nueva clase para el contenedor y listado */
+.suggestions-on-profile-bottom {
+    background: var(--surface-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    margin-top: 16px;
+    padding: 16px 0; /* Ajusta el padding vertical */
+    overflow: hidden;
+}
+
+.suggestions-on-profile-bottom .suggestions-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-color);
+    padding: 0 16px 12px;
+}
+
+.suggestions-on-profile-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Envoltorio para los items con scroll */
+.suggestions-on-profile-bottom {
+    /* Utiliza un contenedor interno para el scroll */
+    overflow-x: auto;
+    white-space: nowrap; /* Evita saltos de línea */
+    padding-bottom: 16px; /* Espacio para la barra de desplazamiento */
+    /* Removemos el padding horizontal para que los items lo definan */
+}
+
+.suggestions-on-profile-bottom .suggestion-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 140px; 
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color); 
+    background: var(--light-bg); 
+    flex-shrink: 0; 
+    margin-left: 8px; /* Espacio entre tarjetas, el primero tendrá 8px */
+    white-space: normal;
+    transition: background 0.2s;
+}
+
+/* Ajuste para el primer y último item en el scroll */
+.suggestions-on-profile-bottom .suggestion-item:first-child {
+    margin-left: 16px; /* El primer item tiene un padding de 16px a la izquierda */
+}
+
+.suggestions-on-profile-bottom .suggestion-item:last-child {
+    margin-right: 16px; /* Padding de 16px a la derecha del último item */
+}
+
+
+/* *** Estilos de Navbar, Posts, y Media Queries se mantuvieron como estaban *** */
+/* (Se omiten aquí para concisión, pero deben incluirse en tu archivo styles.css) */
+/* Asegúrate de tener todos los estilos base de navbar, posts, etc. */
+/* FIN DE LOS ESTILOS DE SUGERENCIAS */
+
+/* --- RESPONSIVE PROFILE --- */
+/* (Se mantienen las media queries anteriores para la adaptabilidad) */
+
+/* Tablet and smaller desktops */
+@media (max-width: 1050px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-main {
+        max-width: 700px;
+        width: 100%;
+    }
+
+    /* .sidebar-right se eliminó o ya no aplica */
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .profile-cover {
+        height: 200px;
+        border-radius: 0;
+    }
+
+    .profile-cover-gradient {
+        font-size: 60px;
+    }
+
+    .profile-header-section {
+        margin-top: -50px;
+    }
+
+    .profile-header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .profile-avatar-large {
+        width: 120px;
+        height: 120px;
+        font-size: 48px;
+        margin-top: -60px;
+    }
+
+    .profile-header-info {
+        padding-bottom: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-name-large {
+        font-size: 24px;
+    }
+
+    .profile-friends-count {
+        font-size: 14px;
+    }
+
+    .profile-friends-preview {
+        justify-content: center;
+    }
+
+    .profile-header-divider {
+        margin: 0 16px;
+    }
+
+    .profile-tabs {
+        padding: 0 8px;
+        overflow-x: auto;
+        gap: 4px;
+    }
+
+    .profile-tab {
+        padding: 12px 12px;
+        flex-shrink: 0;
+    }
+
+    .profile-tab span:last-child {
+        display: none;
+    }
+
+    .profile-tab span:first-child {
+        font-size: 22px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .profile-cover {
+        height: 150px;
+    }
+
+    .profile-cover-gradient {
+        font-size: 50px;
+    }
+
+    .profile-header-section {
+        margin-top: -40px;
+    }
+
+    .profile-avatar-large {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+        margin-top: -50px;
+    }
+
+    .profile-name-large {
+        font-size: 20px;
+    }
+
+    .profile-friends-count {
+        font-size: 13px;
+    }
+
+    .friend-preview-avatar {
+        width: 28px;
+        height: 28px;
+        font-size: 11px;
+        margin-left: -6px;
+    }
+
+    .friend-preview-avatar:first-child {
+        margin-left: 0;
+    }
+
+    .profile-header-content {
+        padding: 12px;
+    }
+
+    .profile-header-divider {
+        margin: 0 12px;
+    }
+
+    .profile-tabs {
+        padding: 0 4px;
+    }
+
+    .profile-tab {
+        padding: 10px 8px;
+        gap: 4px;
+    }
+
+    .profile-tab span:first-child {
+        font-size: 20px;
+    }
+}
+
+/* --- SUGGESTIONS CARD (Adaptado para estar debajo de los posts y ser horizontal) --- */
+
+.suggestions-on-profile-bottom {
+    background: var(--surface-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    margin-top: 16px;
+    padding: 16px 0; /* Padding vertical, el horizontal lo manejarán los ítems */
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    white-space: nowrap; /* Evita que los elementos salten de línea */
+    /* Desactivar flex-direction: column si se aplica en otro lado */
+    display: block; /* Asegura que el contenedor se comporte como un bloque con scroll */
+}
+
+/* Título de la sección */
+.suggestions-on-profile-bottom .suggestions-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-color);
+    padding: 0 16px 12px; /* Mantiene el padding del título */
+    display: block;
+    white-space: normal;
+}
+
+/* Estilos de cada tarjeta de sugerencia individual */
+.suggestions-on-profile-bottom .suggestion-item {
+    display: inline-block; /* Permite que los ítems estén en línea */
+    vertical-align: top; /* Asegura la alineación en la línea */
+    text-align: center;
+    width: 140px; /* Ancho fijo para cada tarjeta */
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color); 
+    background: var(--light-bg); 
+    flex-shrink: 0; /* Evita que se encojan en navegadores flex/grid */
+    margin-left: 8px; /* Espacio entre tarjetas */
+    white-space: normal; /* Permite que el texto dentro del ítem salte de línea */
+    transition: background 0.2s;
+}
+
+/* Ajuste de padding para los extremos */
+.suggestions-on-profile-bottom .suggestion-item:first-child {
+    margin-left: 16px; /* El primer ítem tiene 16px a la izquierda */
+}
+
+.suggestions-on-profile-bottom .suggestion-item:last-child {
+    margin-right: 16px; /* Padding de 16px a la derecha del último ítem para el scroll */
+}
+
+/* Ajustes visuales (mantener el resto de los estilos del ítem) */
+
+.suggestion-avatar {
+    width: 80px;
+    height: 80px;
+    /* ... otros estilos de avatar ... */
+}
+
+/* ... Mantener el resto de estilos para .suggestion-info, .suggestion-name, .suggestion-mutual, .sidebar-follow-btn ... */

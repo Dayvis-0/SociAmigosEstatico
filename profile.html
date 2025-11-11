@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>María González - Perfil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo-link">
+                <div class="app-logo">🌐</div>
+            </a>
+            <div class="search-container" id="searchWrap">
+                <div class="search-input-wrapper" id="searchInputWrap">
+                    <span class="search-icon-inline">🔍</span>
+                    <input type="text" class="search-input" id="searchField" placeholder="Buscar en Red Social Básica">
+                </div>
+                <button class="search-toggle" id="searchToggle" aria-label="Abrir búsqueda">🔍</button>
+            </div>
+        </div>        
+        <!-- En el navbar del perfil -->
+        <div class="navbar-center">
+            <a href="index.html" class="nav-center-item">
+                <span>🏠</span>
+                <span class="nav-center-text">Inicio</span>
+            </a>
+            <a href="friends.html" class="nav-center-item">
+                <span>👥</span>
+                <span class="nav-center-text">Amigos</span>
+            </a>
+            <a href="videos.html" class="nav-center-item">
+                <span>🎥</span>
+                <span class="nav-center-text">Videos</span>
+            </a>
+        </div>
+        
+        <div class="navbar-right">
+            <div class="notification-btn">
+                <span class="notification-icon">🔔</span>
+                <span class="notification-badge">3</span>
+            </div>
+            <div class="user-avatar-nav">MG</div>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <main class="profile-main">
+            <div class="profile-cover">
+                <div class="profile-cover-gradient">🎨</div>
+            </div>
+
+            <div class="profile-header-section">
+                <div class="profile-header-content">
+                    <div class="profile-avatar-large">MG</div>
+                    <div class="profile-header-info">
+                        <h1 class="profile-name-large">María González</h1>
+                        <div class="profile-friends-count">248 amigos</div>
+                        <div class="profile-friends-preview">
+                            <div class="friend-preview-avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">AP</div>
+                            <div class="friend-preview-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">DL</div>
+                            <div class="friend-preview-avatar" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">SF</div>
+                            <div class="friend-preview-avatar" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">RM</div>
+                            <div class="friend-preview-avatar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">PT</div>
+                            <div class="friend-preview-avatar" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">MV</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-header-divider"></div>
+                
+                <div class="profile-tabs">
+                    <div class="profile-tab active">
+                        <span>📝</span>
+                        <span>Publicaciones</span>
+                    </div>
+                    <div class="profile-tab">
+                        <span>ℹ️</span>
+                        <span>Acerca de</span>
+                    </div>
+                    <div class="profile-tab">
+                        <span>👥</span>
+                        <span>Amigos</span>
+                    </div>
+                    <div class="profile-tab">
+                        <span>📷</span>
+                        <span>Fotos</span>
+                    </div>
+                    <div class="profile-tab">
+                        <span>🎥</span>
+                        <span>Videos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="suggestions-card-horizontal">
+                <div class="suggestions-title">Sugerencias para ti</div>
+                
+                <div class="suggestion-item">
+                    <div class="suggestion-avatar">RM</div>
+                    <div class="suggestion-info">
+                        <div class="suggestion-name">Roberto Morales</div>
+                        <div class="suggestion-mutual">4 amigos en común</div>
+                    </div>
+                    <button class="sidebar-follow-btn">Seguir</button>
+                </div>
+
+                <div class="suggestion-item">
+                    <div class="suggestion-avatar" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">PT</div>
+                    <div class="suggestion-info">
+                        <div class="suggestion-name">Patricia Torres</div>
+                        <div class="suggestion-mutual">6 amigos en común</div>
+                    </div>
+                    <button class="sidebar-follow-btn">Seguir</button>
+                </div>
+
+                <div class="suggestion-item">
+                    <div class="suggestion-avatar" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">MV</div>
+                    <div class="suggestion-info">
+                        <div class="suggestion-name">Miguel Vargas</div>
+                        <div class="suggestion-mutual">2 amigos en común</div>
+                    </div>
+                    <button class="sidebar-follow-btn">Seguir</button>
+                </div>
+
+                <div class="suggestion-item">
+                    <div class="suggestion-avatar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">CL</div>
+                    <div class="suggestion-info">
+                        <div class="suggestion-name">Carmen López</div>
+                        <div class="suggestion-mutual">3 amigos en común</div>
+                    </div>
+                    <button class="sidebar-follow-btn">Seguir</button>
+                </div>
+
+                <div class="suggestion-item">
+                    <div class="suggestion-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">AL</div>
+                    <div class="suggestion-info">
+                        <div class="suggestion-name">Alberto Luna</div>
+                        <div class="suggestion-mutual">5 amigos en común</div>
+                    </div>
+                    <button class="sidebar-follow-btn">Seguir</button>
+                </div>
+
+                <div class="suggestion-item">
+                    <div class="suggestion-avatar" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">VH</div>
+                    <div class="suggestion-info">
+                        <div class="suggestion-name">Valeria Herrera</div>
+                        <div class="suggestion-mutual">7 amigos en común</div>
+                    </div>
+                    <button class="sidebar-follow-btn">Seguir</button>
+                </div>
+            </div>
+
+
+            <div class="profile-posts">
+                <div class="create-post">
+                    <div class="create-post-input">
+                        <div class="create-post-avatar">MG</div>
+                        <input type="text" class="create-post-field" placeholder="¿Qué estás pensando, María?" readonly>
+                    </div>
+                </div>
+
+                <article class="post">
+                    <div class="post-header">
+                        <div class="post-avatar">MG</div>
+                        <div class="post-info">
+                            <div class="post-author">María González</div>
+                            <div class="post-time">Hace 2 horas</div>
+                        </div>
+                        <div class="post-menu">⋯</div>
+                    </div>
+                    <div class="post-content">
+                        ¡Acabo de terminar mi nuevo proyecto web! Estoy muy emocionada de compartirlo con todos ustedes. Ha sido un viaje increíble de aprendizaje 🚀
+                    </div>
+                    <div class="post-image">🎨</div>
+                    <div class="post-stats">
+                        <span>❤️ 24 Me gusta</span>
+                        <span>5 Comentarios</span>
+                    </div>
+                    <div class="post-actions">
+                        <button class="post-action liked">
+                            <span>❤️</span>
+                            <span>Me gusta</span>
+                        </button>
+                        <button class="post-action">
+                            <span>💬</span>
+                            <span>Comentar</span>
+                        </button>
+                        <button class="post-action">
+                            <span>✏️</span>
+                            <span>Editar</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <div class="post-header">
+                        <div class="post-avatar">MG</div>
+                        <div class="post-info">
+                            <div class="post-author">María González</div>
+                            <div class="post-time">Hace 5 horas</div>
+                        </div>
+                        <div class="post-menu">⋯</div>
+                    </div>
+                    <div class="post-content">
+                        Compartiendo mi experiencia aprendiendo nuevas tecnologías. ¡El conocimiento no tiene límites! 💻✨
+                    </div>
+                    <div class="post-stats">
+                        <span>❤️ 18 Me gusta</span>
+                        <span>7 Comentarios</span>
+                    </div>
+                    <div class="post-actions">
+                        <button class="post-action">
+                            <span>🤍</span>
+                            <span>Me gusta</span>
+                        </button>
+                        <button class="post-action">
+                            <span>💬</span>
+                            <span>Comentar</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <div class="post-header">
+                        <div class="post-avatar">MG</div>
+                        <div class="post-info">
+                            <div class="post-author">María González</div>
+                            <div class="post-time">Hace 1 día</div>
+                        </div>
+                        <div class="post-menu">⋯</div>
+                    </div>
+                    <div class="post-content">
+                        Reflexionando sobre la importancia del aprendizaje continuo en tecnología 💭✨
+                    </div>
+                    <div class="post-image">📚</div>
+                    <div class="post-stats">
+                        <span>❤️ 32 Me gusta</span>
+                        <span>8 Comentarios</span>
+                    </div>
+                    <div class="post-actions">
+                        <button class="post-action">
+                            <span>🤍</span>
+                            <span>Me gusta</span>
+                        </button>
+                        <button class="post-action">
+                            <span>💬</span>
+                            <span>Comentar</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <div class="post-header">
+                        <div class="post-avatar">MG</div>
+                        <div class="post-info">
+                            <div class="post-author">María González</div>
+                            <div class="post-time">Hace 2 días</div>
+                        </div>
+                        <div class="post-menu">⋯</div>
+                    </div>
+                    <div class="post-content">
+                        ¡Feliz inicio de semana! Que sea productiva para todos 🌟
+                    </div>
+                    <div class="post-stats">
+                        <span>❤️ 45 Me gusta</span>
+                        <span>12 Comentarios</span>
+                    </div>
+                    <div class="post-actions">
+                        <button class="post-action">
+                            <span>🤍</span>
+                            <span>Me gusta</span>
+                        </button>
+                        <button class="post-action">
+                            <span>💬</span>
+                            <span>Comentar</span>
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </main>
+        
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
