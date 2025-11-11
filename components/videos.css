@@ -1,0 +1,100 @@
+/*
+* videos.css
+* Estilos adicionales SOLO para la página de videos.
+*/
+
+/* --- Contenedor Principal --- */
+/* (Inspirado en profile-container y friends-container) */
+
+.videos-container {
+    /* Centra el feed y le da un ancho máximo */
+    max-width: 900px; 
+    margin: 0 auto;
+    padding: 20px;
+    /* Deja espacio para la barra de navegación fija */
+    padding-top: 80px; 
+}
+
+.videos-main {
+    width: 100%;
+    /* Apila los posts verticalmente */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los posts */
+}
+
+/* --- Encabezado de la página de Videos --- */
+/* (Similar a friends-header) */
+
+.videos-header {
+    /* Usa la variable de fondo de tarjeta o un blanco de respaldo */
+    background-color: var(--card-bg-color, #ffffff); 
+    padding: 24px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Espacio antes del primer video */
+    /* Usa la variable de borde o un gris claro de respaldo */
+    border: 1px solid var(--border-color, #e0e0e0); 
+}
+
+.videos-header h1 {
+    font-size: 2rem; /* 32px */
+    font-weight: 700;
+    /* Usa la variable de texto principal o un negro de respaldo */
+    color: var(--text-color, #1c1e21); 
+    margin-bottom: 4px;
+}
+
+.videos-header p {
+    font-size: 1rem; /* 16px */
+    /* Usa la variable de texto secundario o un gris de respaldo */
+    color: var(--text-secondary, #65676b); 
+}
+
+/* --- Estado Activo para la Navegación --- */
+/* (Para resaltar el ícono de "Videos" en la navbar) */
+
+.navbar-center .nav-center-item.active {
+    /* Usa la variable de color primario o un azul de respaldo */
+    color: var(--primary-color, #0866ff); 
+}
+
+/* --- Estilos para el Reproductor de Video Simulado --- */
+
+.post-video-player {
+    position: relative;
+    width: 100%;
+    /* Forza una relación de aspecto de 16:9 */
+    padding-top: 56.25%; /* (9 / 16) * 100% */
+    background-color: #000000; /* Fondo negro del reproductor */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; 
+    cursor: pointer;
+    /* Espacio después del contenido de texto del post */
+    margin-top: 12px; 
+}
+
+.post-video-player .play-icon {
+    /* Centra el ícono de "play" */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-size: 4rem; /* 64px */
+    color: rgba(255, 255, 255, 0.7); /* Blanco semi-transparente */
+    transition: all 0.2s ease;
+    /* Evita que el usuario seleccione el emoji */
+    user-select: none; 
+}
+
+.post-video-player:hover .play-icon {
+    color: rgba(255, 255, 255, 1); /* Blanco sólido al pasar el mouse */
+    transform: translate(-50%, -50%) scale(1.1); /* Efecto de zoom */
+}
+
+/* --- Pequeño ajuste para las estadísticas del post --- */
+/* (Para asegurar que "Vistas" tenga buen espaciado) */
+
+.post-stats span {
+    margin-right: 12px; 
+}

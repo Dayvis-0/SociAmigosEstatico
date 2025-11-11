@@ -241,9 +241,23 @@
     background-color: var(--primary-action-color);
     border-radius: 2px 2px 0 0;
 }
+.nav-center-home-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--primary-action-color);
+    border-radius: 2px 2px 0 0;
+}
 
 /* Aumentar la visibilidad del ícono/emoji en el elemento activo */
 .nav-center-item.active span:first-child {
+    color: var(--primary-action-color);
+}
+
+.nav-center-home-item.active span:first-child {
     color: var(--primary-action-color);
 }
 
@@ -252,3 +266,27 @@
     text-decoration: none;
     color: inherit;
 }   
+
+
+/* --- NAV CENTER: elemento seleccionado --- */
+.nav-center-home-item.active {
+    position: relative; /* necesario para que el ::after se posicione respecto al elemento */
+    color: var(--primary-action-color);
+}
+
+/* Indicador de barra azul debajo del elemento activo */
+.nav-center-center-home-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--primary-action-color);
+    border-radius: 2px 2px 0 0;
+}
+
+/* Aumentar la visibilidad del ícono/emoji en el elemento activo */
+.nav-center-center-home-item.active span:first-child {
+    color: var(--primary-action-color);
+}
