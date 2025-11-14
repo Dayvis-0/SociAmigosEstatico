@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SociAmigos - Crear cuenta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="create-account.css">
+</head>
+<body>
+
+<div class="register-container">
+    <div class="register-box">
+
+        <h2 class="register-title">Crea una cuenta</h2>
+        <p class="register-subtitle">Es rápido y fácil.</p>
+
+        <form class="register-form">
+            <div class="name-fields">
+                <input type="text" class="input-field" placeholder="Nombre" required>
+                <input type="text" class="input-field" placeholder="Apellido" required>
+            </div>
+
+            <label class="label-title">Fecha de nacimiento</label>
+            <div class="birthday-group">
+                <select class="input-field" required>
+                    <option value="" disabled selected>Día</option>
+                    <!-- 1–31 -->
+                    ${[...Array(31).keys()].map(i => `<option>${i+1}</option>`).join('')}
+                </select>
+
+                <select class="input-field" required>
+                    <option value="" disabled selected>Mes</option>
+                    <option>Ene</option><option>Feb</option><option>Mar</option><option>Abr</option>
+                    <option>May</option><option>Jun</option><option>Jul</option><option>Ago</option>
+                    <option>Sep</option><option>Oct</option><option>Nov</option><option>Dic</option>
+                </select>
+
+                <select class="input-field" required>
+                    <option value="" disabled selected>Año</option>
+                    ${[...Array(90).keys()].map(i => `<option>${2025-i}</option>`).join('')}
+                </select>
+            </div>
+
+            <label class="label-title">Género</label>
+            <div class="gender-group">
+                <label class="gender-option">
+                    Mujer
+                    <input type="radio" name="gender" required>
+                </label>
+                <label class="gender-option">
+                    Hombre
+                    <input type="radio" name="gender" required>
+                </label>
+                <label class="gender-option">
+                    Personalizado
+                    <input type="radio" name="gender" required>
+                </label>
+            </div>
+
+            <input type="email" class="input-field" placeholder="Número de celular o correo electrónico" required>
+            <input type="password" class="input-field" placeholder="Contraseña nueva" required>
+
+            <button type="submit" class="register-btn">Registrarte</button>
+        </form>
+
+        <p class="already-account">
+            ¿Ya tienes una cuenta? <a href="login.html">Iniciar sesión</a>
+        </p>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="sidebar-footer">
+    <a href="#" class="footer-link">Políticas</a>
+    <span class="footer-separator">·</span>
+    <a href="#" class="footer-link">Cookies</a>
+    <span class="footer-separator">·</span>
+    <a href="#" class="footer-link">Derechos de autor</a>
+    <div class="footer-copyright">© 2025 Red Social</div>
+</div>
+
+<script src="create-account.js"></script>
+</body>
+</html>

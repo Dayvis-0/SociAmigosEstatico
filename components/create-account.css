@@ -1,0 +1,105 @@
+/* CONTENEDOR PRINCIPAL */
+.register-container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    width: 100%;
+}
+
+.register-box {
+    background: var(--surface-color);
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    max-width: 420px;
+    width: 100%;
+}
+
+/* TITULOS */
+.register-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.register-subtitle {
+    margin-top: -4px;
+    margin-bottom: 20px;
+    color: var(--secondary-text-color);
+    font-size: 17px;
+}
+
+/* CAMPOS DE NOMBRE */
+.name-fields {
+    display: flex;
+    gap: 10px;
+}
+
+/* FECHA DE NACIMIENTO */
+.label-title {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--secondary-text-color);
+}
+
+.birthday-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+/* GÉNERO */
+.gender-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.gender-option {
+    flex: 1;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* BOTÓN */
+.register-btn {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--primary-action-color);
+    color: var(--surface-color);
+    border: none;
+    border-radius: 6px;
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* LINK YA TIENES CUENTA */
+.already-account {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 15px;
+}
+
+.already-account a {
+    color: var(--primary-action-color);
+    text-decoration: none;
+}
+
+.already-account a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .birthday-group,
+    .gender-group {
+        flex-direction: column;
+    }
+}
