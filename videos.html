@@ -42,9 +42,20 @@
                 <span class="notification-icon">🔔</span>
                 <span class="notification-badge">3</span>
             </div>
-            <a href="profile.html">
-                <div class="user-avatar-nav">MG</div>
-            </a>
+            <div class="user-menu-container">
+                <div class="user-avatar-nav" id="userMenuToggle">MG</div>
+                <div class="user-dropdown-menu" id="userDropdownMenu">
+                    <a href="profile.html" class="user-menu-item">
+                        <span>👤</span>
+                        <span>Ver perfil</span>
+                    </a>
+                    <div class="user-menu-divider"></div>
+                    <a href="#" class="user-menu-item" onclick="alert('Sesión cerrada'); return false;">
+                        <span>🚪</span>
+                        <span>Cerrar sesión</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 

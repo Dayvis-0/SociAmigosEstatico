@@ -60,3 +60,21 @@ document.addEventListener('keydown', (e) => {
         searchWrap.classList.remove('open');
     }
 });
+
+// --- USER MENU TOGGLE ---
+const userMenuToggle = document.getElementById('userMenuToggle');
+const userDropdownMenu = document.getElementById('userDropdownMenu');
+
+if (userMenuToggle && userDropdownMenu) {
+    userMenuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        userDropdownMenu.classList.toggle('show');
+    });
+
+    // Cerrar el menú al hacer click fuera
+    document.addEventListener('click', function(e) {
+        if (!userMenuToggle.contains(e.target) && !userDropdownMenu.contains(e.target)) {
+            userDropdownMenu.classList.remove('show');
+        }
+    });
+}

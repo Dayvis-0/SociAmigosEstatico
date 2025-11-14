@@ -45,7 +45,20 @@
                 <span class="notification-icon">🔔</span>
                 <span class="notification-badge">3</span>
             </div>
-            <div class="user-avatar-nav">MG</div>
+            <div class="user-menu-container">
+                <div class="user-avatar-nav" id="userMenuToggle">MG</div>
+                <div class="user-dropdown-menu" id="userDropdownMenu">
+                    <a href="profile.html" class="user-menu-item">
+                        <span>👤</span>
+                        <span>Ver perfil</span>
+                    </a>
+                    <div class="user-menu-divider"></div>
+                    <a href="#" class="user-menu-item" onclick="alert('Sesión cerrada'); return false;">
+                        <span>🚪</span>
+                        <span>Cerrar sesión</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -53,6 +66,10 @@
         <aside class="sidebar-left">
             <!-- En el sidebar izquierdo -->
             <div class="sidebar-nav-group">
+                <a href="profile.html" class="sidebar-item active">
+                    <span>👤</span>
+                    <span class="sidebar-text">María González</span>
+                </a>
                 <a href="index.html" class="sidebar-item active">
                     <span>🏠</span>
                     <span class="sidebar-text">Inicio</span>

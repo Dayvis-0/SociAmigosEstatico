@@ -290,3 +290,50 @@
 .nav-center-center-home-item.active span:first-child {
     color: var(--primary-action-color);
 }
+
+/* --- USER MENU DROPDOWN --- */
+.user-menu-container {
+    position: relative;
+}
+
+.user-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: var(--surface-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    min-width: 200px;
+    padding: 8px 0;
+    display: none;
+    z-index: 1000;
+}
+
+.user-dropdown-menu.show {
+    display: block;
+}
+
+.user-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background 0.2s;
+    font-size: 15px;
+}
+
+.user-menu-item:hover {
+    background: var(--light-bg);
+}
+
+.user-menu-item span:first-child {
+    font-size: 20px;
+}
+
+.user-menu-divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 8px 0;
+}
